@@ -175,7 +175,6 @@ if(isset($_SESSION['login'])) {
                   <th>Aksi</th>
                 </tr>
                 <?php
-					
 					// $connect = mysqli_connect("localhost", "root", "", "pondok_satu");
 					include 'proses/koneksi.php';
 					
@@ -184,7 +183,6 @@ if(isset($_SESSION['login'])) {
 					while($row = mysqli_fetch_array($sql)) {
 						echo "
 						<tr>
-						
 							<td>".$no++."</td>
 							<td>".$row['nama_santri']."</td>
 							<td>".$row['tempat_lahir']."</td>
@@ -201,7 +199,6 @@ if(isset($_SESSION['login'])) {
 									<i class='fa fa-trash-o'></i>Hapus
 								</a>
 							</td>
-						
 						</tr>
 						
 						";

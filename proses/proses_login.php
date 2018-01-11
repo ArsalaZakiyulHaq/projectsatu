@@ -2,7 +2,7 @@
 	include 'koneksi.php';
 	
 	$email = $_POST['email'];
-	$password = md5($_POST['password']);
+	$password = $_POST['password'];
 	
 	if (!empty($email) && !empty($password)) {
 		$sql = mysqli_query($connect, "SELECT * FROM user WHERE email = '$email' AND password = '$password'");
