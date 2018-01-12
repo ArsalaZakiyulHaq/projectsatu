@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['login'])) {
+	if (isset($_SESSION['login'])) {
 		
 		
 		// $connect = mysqli_connect("localhost", "root", "", "pondok_satu");
@@ -17,21 +17,13 @@
 		$tanggal_input = date('Y-m-d H:i:s');
 		$user_id       = $_SESSION['user_id'];
 		
-		
 		if (!empty($nama) && !empty($alamat) && !empty($tempat) && !empty($tanggal) && !empty($jenis)) {
-
-		mysqli_query($connect, "
-			UPDATE santri 
-			SET nama = '$nama', tempat_lahir = '$tempat', tanggal_lahir = '$tanggal', alamat = '$alamat', jenis_kelamin = '$jenis'
+			
+			mysqli_query($connect, "
+			UPDATE santri
+			SET nama = '$nama', tempat_lahir = '$tempat', tanggal_lahir = '$tanggal', alamat = '$alamat', jenis_kelamin = 'jenis'
 			WHERE id = '$id'
 			");
-		// if (!empty($nama) && !empty($alamat) && !empty($tempat) && !empty($tanggal) && !empty($jenis)) {
-			
-			// mysqli_query($connect, "
-			// UPDATE santri
-			// SET nama = '$nama', tempat_lahir = '$tempat', tanggal_lahir = '$tanggal', alamat = '$alamat', jenis_kelamin = 'jenis'
-			// WHERE id = '$id'
-			// ");
 		
 		header("location:../santri.php");
 	
